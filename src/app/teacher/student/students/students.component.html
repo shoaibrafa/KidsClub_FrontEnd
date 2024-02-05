@@ -1,0 +1,44 @@
+
+<div class="mt-5" *ngIf="students.length == 0">
+    <h6>No Student Registerd</h6>
+  </div>
+  <div class="container-fluid mt-5" *ngIf="students.length > 0">
+      <div class="row">
+          <div class="col-lg-10">
+            <div class="row mt3 mb-3">
+              <table class="table table-sm table-striped table-hover">
+                  <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Birth Date</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                  <tbody>
+                      <tr *ngFor="let s of students; index as i">
+                          <td>{{ i+1 }}</td>
+                          <td>{{ s.name }}</td>
+                          <td>{{ s.l_name }}</td>
+                          <td>{{ s.birth_date }}</td>
+                          <td>{{ s.email }}</td>
+                          <td>{{ s.status }}</td>
+                          <td>Activities</td>
+                          <td><i class="bi bi-file-earmark-lock2" style="color: red;" *ngIf="s.status == 'locked'"></i>
+                              <i class="bi bi-activity" style="color: green;" *ngIf="s.status == 'active'"></i></td>
+                          <td><a class="edit" href="#">Edit</a></td>
+                          <td><a class="delete" href="#">Delete</a></td>
+                          <td><a class="delete" [routerLink]="['/main/student/activities', s.email]" *ngIf="s.status=='active'">View Activities</a>
+                            <span style="color: red;" *ngIf="s.status == 'locked'">Locked</span></td>
+                      </tr>
+                  </tbody>
+                </table>
+          </div>
+      </div>
+  

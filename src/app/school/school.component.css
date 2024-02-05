@@ -1,0 +1,14 @@
+.fixed-section {
+  position: fixed;
+  z-index: 20;
+}
+
+.sidebar-wrapper {
+  position: relative;
+  z-index: 3;
+}
+
+.scrollable-div {
+  max-height: 87vh;
+  overflow: auto;
+}

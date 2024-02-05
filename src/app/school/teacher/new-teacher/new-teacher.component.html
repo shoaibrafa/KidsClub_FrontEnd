@@ -1,0 +1,66 @@
+
+<div class="container mt-5" style="height: 60vh;">
+    <div class="row">
+      <div class="col-sm-6">
+        <h4>Register New Teacher</h4>
+        <form (ngSubmit)="register()">
+          <div class="row mb-3">
+            <label for="school_id" class="col-sm-4 col-form-label">School ID:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="school_id" name="school_id" disabled [value]="school_id">
+            </div>
+          </div>
+  
+          <div class="row mb-3">
+            <label for="name" class="col-sm-4 col-form-label">Name:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="name" name="name" [(ngModel)]="teacher.name">
+            </div>
+          </div>
+  
+          <div class="row mb-3">
+            <label for="l_name" class="col-sm-4 col-form-label">Last Name:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="l_name" name="l_name" [(ngModel)]="teacher.l_name">
+            </div>
+          </div>
+
+
+          <div class="row mb-3">
+            <label for="email" class="col-sm-4 col-form-label">Email</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="email" name="email" [(ngModel)]="teacher.email">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="email" class="col-sm-4 col-form-label">Phone</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="email" name="email" [(ngModel)]="teacher.phone">
+            </div>
+          </div>
+
+        
+  
+          <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+              <button type="submit" class="btn btn-sm btn-primary btn-block">Register</button>
+              <div class="alert alert-success alert-dismissible fade show small-alert mt-2" role="alert" *ngIf="register_result !=0 && register_result == 201">
+                <strong>Success!</strong> New Teacher Registered.
+              </div>
+
+              <div class="alert alert-warning alert-dismissible fade show small-alert mt-2" role="alert" *ngIf="register_result !=0 && register_result == 409">
+                <strong>Ops! </strong> Duplicate Entry!
+              </div>
+
+              <div class="alert alert-danger alert-dismissible fade show small-alert mt-2" role="alert" *ngIf="register_result !=0 && register_result != 409 && register_result != 201">
+                <strong>Ops! </strong> Unknow Error! {{ register_result }}
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

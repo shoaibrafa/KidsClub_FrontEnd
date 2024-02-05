@@ -1,0 +1,35 @@
+.bg-dark-blue{
+    background-color: #15283c;
+}
+
+h5{
+    color: #214162;
+    margin-top: 15px;
+}
+
+
+.btn {
+    width: 130px;
+    height: 35px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #214162;
+    color: #d5e2ff; 
+    border-radius: 0px; 
+    border: 0;
+}
+
+.btn:active {
+    background-color: #214162;
+    color: #ff5722;
+  }
+
+a{
+    color:#d5e2ff;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff5722;
+}

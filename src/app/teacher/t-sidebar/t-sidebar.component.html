@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-2 p-0">
+    </div>
+    <div style="height: 90vh; background-color: #15283c;" class="p-0">
+        <div class="horizontal-line"></div>
+        <div class="text-center">
+            <p class="portal">Teachers Portal</p>
+            <p class="portal-data">__Teacher: {{ teacher_full_name }}</p>
+            <p class="portal-data">__Grade: {{ grade }}</p>
+            <p class="portal-data">__Start: {{ startDate }}</p>
+            <p class="portal-data">__End: {{ endDate }}</p>
+        </div> 
+        <div class="horizontal-line" style="margin-top: 10px;"></div>
+        <div class="sidebar mt-3">
+            <ul class="list-group custom-list-group">
+                <li class="list-group-item"><a routerLink="/app-teacher/teacher/dashboard"><i class="fas fa-dashboard"></i>Dashboard</a></li>
+                <li class="list-group-item"><a routerLink="/app-teacher/teacher/student/students"><i class="fas fa-edit"></i>Students</a></li>
+                <!-- <li class="list-group-item"><a routerLink="/app-school/school/grade/grades"><i class="fas fa-clock"></i>Grades</a></li> -->
+                
+            </ul>
+        </div>
+    </div>
+</div>

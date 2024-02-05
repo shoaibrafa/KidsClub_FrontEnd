@@ -1,0 +1,13 @@
+<div class="container-fluid p-0 m-0">
+    <div class="row align-items-center">
+    <div class="col-12">
+        <button class="btn btn-sm btn-success mt-2 m-2" *ngIf="rootService.currentComponent === 'DASHBOARD'">New Post</button>
+        <button class="btn btn-sm btn-success mt-2 m-2" *ngIf="rootService.currentComponent === 'GRADE'" (click)="new_grade()">New Grade</button>
+        <button class="btn btn-sm btn-success mt-2 m-2" *ngIf="rootService.currentComponent === 'TEACHER'" (click)="new_teacher()">New Teacher</button>
+        <!-- <button class="btn btn-sm mt-2 m-2" *ngIf="rootService.currentComponent === 'teacher'" (click)="register_teacher()">Register Teacher</button> -->
+    </div>
+        <div class="col-6 text-right">
+            
+        </div>
+    </div>
+</div>

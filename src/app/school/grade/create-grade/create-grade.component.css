@@ -1,0 +1,23 @@
+.btn {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #214162;
+    color: #d5e2ff;
+    border-radius: 0px;
+    padding: 10px 20px;
+    border: 0;
+}
+
+.btn:active {
+    background-color: #ff5722;
+}
+
+.success {
+    color: rgb(69, 128, 11);
+    text-decoration: none;
+}
+
+.failed {
+    color: rgb(124, 8, 8);
+    text-decoration: none;
+}

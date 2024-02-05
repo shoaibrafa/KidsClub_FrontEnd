@@ -1,0 +1,59 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-6">
+        <h4>Create New Class</h4>
+        <form (ngSubmit)="create()">
+          <div class="row mb-3">
+            <label for="school_id" class="col-sm-4 col-form-label">School ID:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="school_id" name="schoolid" disabled [value]="school_id">
+            </div>
+          </div>
+  
+          <div class="row mb-3">
+            <label for="grade" class="col-sm-4 col-form-label">Grade:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="grade" name="grade" [(ngModel)]="grade.grade">
+            </div>
+          </div>
+  
+          <div class="row mb-3">
+            <label for="start_date" class="col-sm-4 col-form-label">Start Date:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="start_date" name="start_date" placeholder="yyyy-mm-dd" [(ngModel)]="grade.startDate">
+            </div>
+          </div>
+  
+          <div class="row mb-3">
+            <label for="end_date" class="col-sm-4 col-form-label">End Date:</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="end_date" name="end_date" placeholder="yyyy-mm-dd" [(ngModel)]="grade.endDate">
+            </div>
+          </div>
+  
+          <div class="row mb-3">
+            <label for="grade" class="col-sm-4 col-form-label">Teacher:</label>
+            <div class="col-sm-8">
+              <div class="dropdown" (click)="toggleDropdown()">
+                <button class="btn dropdown-toggle" type="button" style="width: 100%;">{{ selectedTeacher ? selectedTeacher : 'Select Teacher' }}</button>
+                <div class="dropdown-menu" [ngClass]="{ 'show': isDropdownOpen }" style="width: 100%;">
+                  <a class="dropdown-item" *ngFor="let t of teacher_names" (click)="setTeacher(t[0], t[1])" >{{ t[0] }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+              <button type="submit" class="btn btn-sm btn-primary btn-block">Save</button>
+              <div class="mt-3 success" *ngIf="gradeCreationStatus === 201">Class created successfully!</div>
+              <div class="mt-3 failed" *ngIf="gradeCreationStatus === 409">Class already exists!</div>
+            </div>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+  

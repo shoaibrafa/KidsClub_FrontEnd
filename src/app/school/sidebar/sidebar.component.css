@@ -1,0 +1,57 @@
+.school_name {
+  font-size: 20px;
+  color: #d3e1ff;
+  margin: 0px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.school_stat {
+  font-size: 12px;
+}
+
+.horizontal-line {
+  border-top: 1px solid #ff5722;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.sidebar {
+  background-color: #15283c;
+  height: 100vh;
+}
+
+.sidebar .list-group-item {
+  border: none;
+  font-size: 14px;
+  background-color: #15283c;
+
+}
+
+.sidebar .list-group-item:hover {
+  background-color: #214162;
+
+}
+
+.sidebar .list-group-item i {
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #d3e1ff;
+}
+
+a:hover {
+  color: #ff5722;
+}
+
+.portal {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff5722;
+  margin-left: 20px;
+  margin-top: 10px;
+  text-align: left;
+  
+}
